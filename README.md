@@ -74,7 +74,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - Special thanks to the developers of customtkinter and MySQL Connector for Python.
 
 ## Contact Information
-For any queries or support, please contact [your email](mailto:d.mueller14@outlook.com).
+For any queries or support, please contact [d.mueller14@outlook.com](mailto:d.mueller14@outlook.com).
 
 ---
 
