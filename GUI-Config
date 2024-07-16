@@ -118,7 +118,7 @@ class GUIConfig(ctk.CTk):
         self.update_button = ctk.CTkButton(self.tabview.tab('Patient'), text='Aktualisieren', command=self.update_patient)
         self.update_button.grid(row=14, column=1, pady=10, padx=10)
         
-    # Function for updating the patient data    
+    # Function for updating the patient entrys    
     def update_patient(self):
         # Collect data from the entries
         name = self.new_name_entry.get()
