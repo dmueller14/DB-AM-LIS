@@ -146,7 +146,6 @@ class GUIConfig(ctk.CTk):
         finally:
             cursor.close()
             conn.close()
-
         
         # Empfänger-Tab
         # Labels for the current receiver data
