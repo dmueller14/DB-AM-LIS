@@ -1,7 +1,7 @@
 # DB-AM-LIS
 
 ## Description
-DB-AM-LIS is a new database system designed for a laboratory's financial accounting needs. It addresses the limitations of the currently used system by providing necessary SQL statements and allowing users to write 
+DB-AM-LIS is a new database system designed for a laboratory's financial accounting needs. It addresses the limitations of the currently used system by providing necessary SQL statements (or probably NoSQL) and allowing users to write 
 comments on unpaid receipts directly within the system. The new database will offer a user-friendly GUI designed with customtkinter for enhanced accessibility.
 
 ## Key Features
