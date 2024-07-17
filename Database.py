@@ -8,7 +8,6 @@ conn = mysql.connector.connect(
   port=3306
 )
 
-
 # Creating a cursor
 cursor = conn.cursor()
 
@@ -27,7 +26,7 @@ cursor.execute("""CREATE TABLE IF NOT EXISTS patients (
     zip_code VARCHAR(255),
     phone_number VARCHAR(255),
     email VARCHAR(255),
-    mobile VARCHAR(255),""")
+    mobile VARCHAR(255)""")
 
 # Table: Receipts
 cursor.execute("""CREATE TABLE IF NOT EXISTS receipts ( 
