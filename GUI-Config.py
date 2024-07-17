@@ -7,18 +7,12 @@ ctk.set_appearance_mode("System")  # Modes: "System" (standard), "Dark", "Light"
 ctk.set_default_color_theme("blue")  # Themes: "blue" (standard), "green", "dark-blue"
 
 class GUIConfig(ctk.CTk):
-    def __init__(self):
+    def __init__(self, master=None):
         super().__init__()
 
         self.title("GUI-Config")
         self.geometry("800x800")
         self.resizable(True, True)
-
-        self.update_patient()
-        self.update_receiver()
-        self.update_receipt()
-        self.update_submitter()
-        self.save_comment()
         
         self.tabview = ctk.CTkTabview(self, width=800, height=800)
         self.tabview.grid(row=0, column=0, padx=10, pady=10)
@@ -117,7 +111,8 @@ class GUIConfig(ctk.CTk):
         
         self.update_button = ctk.CTkButton(self.tabview.tab('Patient'), text='Aktualisieren', command=self.update_patient)
         self.update_button.grid(row=14, column=1, pady=10, padx=10)
-        
+       
+        self.update_patient()
     # Function for updating the patient entrys    
     def update_patient(self):
         # Collect data from the entries
@@ -243,6 +238,8 @@ class GUIConfig(ctk.CTk):
         # Button for updating the receiver data
         self.update_receiver_button = ctk.CTkButton(self.tabview.tab('Empfänger'), text='Aktualisieren', command=self.update)
         self.update_receiver_button.grid(row=14, column=1, pady=10, padx=10)    
+        
+        self.update_receiver()
     
     # Function for updating the receiver data    
     def update_receiver(self):
@@ -347,6 +344,8 @@ class GUIConfig(ctk.CTk):
         # set new_receipt_goal_entry to disabled
         self.new_receipt_goal_entry.configure(state='disabled')
         
+        self.enable_goal_entry()
+        
     # set new_receipt_goal_entry to enabled if new_receipt_goal_radio is selected
     def enable_goal_entry(self):
         if self.new_receipt_goal_radio.get() == 'Zahlungsziel':
@@ -381,6 +380,8 @@ class GUIConfig(ctk.CTk):
         # Button for updating the receipt data
         self.update_receipt_button = ctk.CTkButton(self.tabview.tab('Rechnung'), text='Aktualisieren', command=self.update_receipt)
         self.update_receipt_button.grid(row=9, column=1, pady=10, padx=10)
+        
+        self.update_receipt()
         
     # Function for updating the receipt data
     def update_receipt(self):
@@ -459,6 +460,11 @@ class GUIConfig(ctk.CTk):
         self.submitter_mobile_entry.grid(row=5, column=1, pady=10, padx=10)
         self.submitter_email_entry.grid(row=5, column=2, pady=10, padx=10)
         
+        self.update_submitter_button = ctk.CTkButton(self.tabview.tab('Einsender'), text='Aktualisieren', command=self.update_submitter)
+        self.update_submitter_button.grid(row=6, column=1, pady=10, padx=10)
+        
+        self.update_submitter()
+        
     # method for updating the submitter data
     def update_submitter(self):
         # Collect data from the entries
@@ -514,6 +520,11 @@ class GUIConfig(ctk.CTk):
         self.comment_entry = ctk.CTkEntry(self.tabview.tab('Kommentar'), placeholder_text='Kommentar')
         self.comment_entry.grid(row=2, column=0, columnspan=5, pady=10, padx=10)
 
+        self.save_comment_button = ctk.CTkButton(self.tabview.tab('Kommentar'), text='Kommentar speichern', command=self.safe_comment)
+        self.save_comment_button.grid(row=3, column=1, pady=10, padx=10)
+        
+        self.safe_comment()
+
     # Implement safe_comment method
     def safe_comment(self):
         comment = self.comment_entry.get()
@@ -536,11 +547,12 @@ class GUIConfig(ctk.CTk):
 # Main    
 if __name__ == '__main__':
     app = GUIConfig()
+    """
     app.update_patient()
     app.update_receiver()
     app.update_receipt()
     app.safe_comment()
     app.mainloop()
-    
+    """
     
     
