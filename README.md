@@ -38,12 +38,12 @@ comments on unpaid receipts directly within the system. The new database will of
    ```bash
    pip install mysql-connector-python customtkinter
    ```
-3. **Set up the MySQL database:**
-   - Create a new database in MySQL.
-   - Run the provided SQL script (`setup.sql` *upcoming file*) to create necessary tables and schema.
+3. **Set up the MongoDB database:**
+   - Create a new database in MongoDB.
+   - Run the provided Json script (`Json-database` *upcoming file*) to create necessary schema.
 
 4. **Configure the database connection:**
-   - Update the `config.py` file with your MySQL database credentials.
+   - Update the `config.py` file with your MongoDB database credentials.
 
 5. **Run the application:**
    ```bash
