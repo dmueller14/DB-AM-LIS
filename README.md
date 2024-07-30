@@ -1,11 +1,11 @@
 # DB-AM-LIS
 
 ## Description
-DB-AM-LIS is a new database system designed for a laboratory's financial accounting needs. It addresses the limitations of the currently used system by providing necessary SQL statements (or probably NoSQL) and allowing users to write 
+DB-AM-LIS is a new database system designed for a laboratory's financial accounting needs. It addresses the limitations of the currently used system by providing access to a MongoDB-Database (Json-format) and allowing users to write 
 comments on unpaid receipts directly within the system. The new database will offer a user-friendly GUI designed with customtkinter for enhanced accessibility.
 
 ## Key Features
-- **SQL Statements**: Execute SQL statements for selecting specific receipts.
+- **Statements**: Execute statements for selecting specific receipts.
 - **New Receiver Window**: Add a new receiver of the receipt with a dedicated window and column.
 - **Receipt Selection**: Select receipts by receipt number, patient, or order number.
 - **Patient Warnings**: Track whether a patient has received a warning.
@@ -24,8 +24,8 @@ comments on unpaid receipts directly within the system. The new database will of
 ## Installation
 ### Prerequisites
 - Python (version 3.7 or higher)
-- MySQL Server
-- MySQL Connector for Python
+- MongoDB Server
+- Pymongo for Python
 - customtkinter library
 
 ### Steps
